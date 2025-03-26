@@ -3,3 +3,8 @@ python-dotenv
 openai
 Flask
 langchain-openai
+Jinja2==2.11.2
+Werkzeug==1.0.1
+MarkupSafe==1.1.1
+click
+itsdangerous

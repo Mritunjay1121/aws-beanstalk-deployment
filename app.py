@@ -16,7 +16,7 @@ demo = gr.Interface(
 # Launch the app
 if __name__ == "__main__":
     demo.launch(
-        server_name="127.0.0.1",  # Localhost
+        server_name="0.0.0.0",  # Localhost
         server_port=8000,        # Default Gradio port (changed from 8080 to avoid conflicts)
         debug=True               # Enable debug mode for troubleshooting
     )

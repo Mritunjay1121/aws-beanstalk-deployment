@@ -10,12 +10,16 @@ demo = gr.Interface(
     inputs=None,        # No inputs required
     outputs="text",     # Output will be text
     title="Simple Hello App",
-    description="A basic Gradio app that says Hello!"
+    description="A basic Gradio app that says Hello!dfsfs"
 )
 
-# Launch the app
+# Create the WSGI app for Gunicorn
+app = demo.app  # Gradio's underlying Flask app
+
 if __name__ == "__main__":
+    # For local testing
     demo.launch(
-        server_name="0.0.0.0",  # Localhost       # Default Gradio port (changed from 8080 to avoid conflicts)
-        debug=True               # Enable debug mode for troubleshooting
+        server_name="127.0.0.1",
+        server_port=8080,
+        debug=True
     )
